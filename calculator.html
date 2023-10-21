@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="number" placeholder="first value" id="input1">
+    <input type="number" placeholder="second value" id="input2">
+    <button id="add" onclick="Addition()">Add</button>
+    <button id="multi" onclick="Multiplication()">Multiply</button>
+    <button id="sub" onclick="Subtract()">Subtract</button>
+    <button id="divid" onclick="Divide()">Divide</button>
+</body>
+</html>
+
+<Script>
+    let sum1=document.getElementById("input1")
+    let sum2=document.getElementById("input2")
+
+    function Addition(){
+        console.log(Number(sum1.value) + Number(sum2.value));
+    }
+
+    function Multiplication(){
+        console.log(Number(sum1.value)*Number(sum2.value));
+    }
+    function Subtract(){
+        console.log(Number(sum1.value) - Number(sum2.value))
+    }
+
+    function Divide(){
+        console.log(Number(sum1.value) / Number(sum2.value))
+    }
+</Script>
