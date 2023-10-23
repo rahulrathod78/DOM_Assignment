@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+  </head>
+  <body id="bdy">
+    <form id="get">
+      <input type="text" name="name" id="name" class="clean" />
+      <select id="gender" class="clean">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+      </select>
+      <input type="text" name="email" id="email" class="clean" />
+      <input type="text" name="mobile" id="mobile" class="clean" />
+    </form>
+    <hr />
+    <h1 id="dName" class="mat">NAME</h1>
+    <h2 id="dGender" class="mat">GENDER</h2>
+    <h3 id="dEmail" class="mat">EMAIL</h3>
+    <h4 id="dMobile" class="mat">MOBILE</h4>
+    <hr />
+    <button onclick="showName()">NAME</button>
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showEmail()">EMAIL</button>
+    <button onclick="showMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+
+    <button id="rstDsplay">RESET DISPLAY</button>
+    <script type="text/javascript">
+      function showName() {
+        // Show filled name inside h1
+        let deatils = document.getElementById("name");
+        console.log(deatils.value);
+      }
+
+      function showGender() {
+        // Show the selected gender inside h2
+        let gender1 = document.getElementById("gender");
+        console.log(gender1.value);
+      }
+
+      function showEmail() {
+        // Show the filled email inside h3
+        let mail = document.getElementById("email");
+        console.log(mail.value);
+      }
+
+      function showMobile() {
+        // Show the filled mobile inside h4
+        let call = document.getElementById("mobile");
+        console.log(call.value);
+      }
+
+      function resetForm() {
+        // Reset all the form elements to default values (blank "")
+        let set = document.getElementById("get");
+        set.reset();
+      }
+
+      const btn = document.querySelector("#rstDsplay");
+      
+      function resetDisplay() {
+        const heading = document.querySelectorAll(".mat");
+        heading[0].textContent = "Hello"
+        heading[1].textContent = ""
+        heading[2].textContent = ""
+        heading[3].textContent = ""
+        // Reset all the headings (h1, h2, h3, h4) to blank values
+      }
+
+      btn.addEventListener("click", resetDisplay)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>This example demonstrates how we can change text content when clicking on button</h1>
+  <hr>
+  <h1 id="display">Click on Login to continue</h1>
+  <button id="login" >Login</button>
+  <button id="logout">Logout</button>
+</body>
+</html>
+<script>
+    let look=document.querySelector("#login")
+    let book=document.querySelector("#logout")
+
+  function login() {
+    //complete this function
+    let heading=document.querySelector("#display")
+    heading.textContent="Login Success"
+    
+  }
+  look.addEventListener("click",login)
+
+  function logout() {
+    //complete this function
+    let heading=document.querySelector("#display")
+    heading.textContent="Logout Success"
+  }
+  book.addEventListener("click",logout)
+</script>
